@@ -20,7 +20,7 @@ packages:
     description:
       name: bs_flutter_utils
       url: "https://github.com/pwoltman/bs_flutter_utils.git"
-    source: hosted
+    source: git
     version: "1.0.0"
   characters:
     dependency: transitive
