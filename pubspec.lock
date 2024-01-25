@@ -19,7 +19,7 @@ packages:
     dependency: "direct main"
     description:
       name: bs_flutter_utils
-      url: "https://pub.dartlang.org"
+      url: "https://github.com/pwoltman/bs_flutter_utils.git"
     source: hosted
     version: "1.0.0"
   characters:
