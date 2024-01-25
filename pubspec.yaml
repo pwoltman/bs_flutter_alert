@@ -13,7 +13,9 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
 
-  bs_flutter_utils: ^1.0.0
+  bs_flutter_utils:
+    git:
+      url: https://github.com/pwoltman/bs_flutter_utils.git
 
 dev_dependencies:
   flutter_test:
