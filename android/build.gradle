@@ -1,40 +1,26 @@
-group 'com.bsflutter.alert.bs_flutter_alert'
-version '1.0-SNAPSHOT'
+// android/build.gradle inside bs_flutter_alert
 
-buildscript {
-    ext.kotlin_version = '1.8.22'
-    repositories {
-        google()
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
+plugins {
+  id 'com.android.library'
+  id 'org.jetbrains.kotlin.android'   // plugin version comes from the host app's settings.gradle
 }
-
-rootProject.allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
-}
-
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 30
+  namespace 'com.bsflutter.alert'     // ← pick a unique, stable namespace
+  compileSdkVersion 34
 
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
-    defaultConfig {
-        minSdkVersion 16
-    }
+  defaultConfig {
+    minSdkVersion 21
+  }
+
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+  }
 }
 
+// No buildscript {}, no repositories {}, no jcenter(), no AGP classpath here.
+// Also no explicit kotlin-stdlib dependency; the Kotlin plugin supplies it.
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+  // (empty)
 }
+
