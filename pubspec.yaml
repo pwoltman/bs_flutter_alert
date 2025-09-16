@@ -16,6 +16,7 @@ dependencies:
   bs_flutter_utils:
     git:
       url: https://github.com/pwoltman/bs_flutter_utils.git
+      ref: b4cc36aac2e2bbc502d68e56d1e8d0e298af99f2
 
 dev_dependencies:
   flutter_test:
